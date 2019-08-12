@@ -16,3 +16,30 @@ input[type=text] {
 input[type=text]:focus {
     width: 50%;
 }
+
+.link-body {
+    border: 1px solid purple;
+    border-radius: 10px;
+    margin: 50px 100px;
+    padding: 10px 20px 20px;
+}
+
+li {
+    a{
+        text-decoration: none;
+        color: black;
+    }
+    a:hover {
+        color: purple;
+    }
+    margin: 10px 0;
+}
+
+button {
+    outline: none;
+    background-color: white;
+    border: 1px solid purple;
+    border-radius: 5px;
+    float: right;
+}
+
