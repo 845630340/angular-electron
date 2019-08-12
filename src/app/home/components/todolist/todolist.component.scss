@@ -1,0 +1,45 @@
+.todo-header {
+    margin-left: 20px;
+}
+
+input[type=text] {
+    width: 200px;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid purple;
+    transition: 0.4s;
+}
+
+input:focus {
+    width: 50%;
+}
+
+li {
+    list-style-type: none;
+    margin-bottom: 10px;
+}
+
+.doing {
+    margin: 50px 30px;
+    padding: 5px 20px;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    background: pink;
+}
+
+.done {
+    margin: 40px 30px;
+    padding: 5px 20px;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    background: pink;
+}
+
+button {
+    float: right;
+    outline: none;
+    border: none;
+    background: pink;
+}

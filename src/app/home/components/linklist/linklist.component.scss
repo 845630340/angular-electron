@@ -1,0 +1,18 @@
+.link-header {
+    margin-left: 20px;
+}
+
+input[type=text] {
+    display: block;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid purple;
+    transition: 0.4s;
+    width: 300px;
+    margin: 30px 0;
+    
+}
+
+input[type=text]:focus {
+    width: 50%;
+}

@@ -1,0 +1,13 @@
+<div class='link-header'>
+  <h2>Link List</h2>
+  <input type='text' [(ngModel)]="link_key" placeholder="narration..." />
+  <input type='text' [(ngModel)]="link_value" placeholder="link..." (keyup)="add($event)"/>
+</div>
+
+<div class='link-body'>
+  <ul>
+    <li *ngFor="let item of link_list; let key = index">
+      <a [href]="item.value" target="_blank">{{item.key}}</a>
+    </li>
+  </ul>
+</div>
