@@ -22,8 +22,8 @@ export class LinklistComponent implements OnInit {
   }
 
   add(value: string) {
-    
-    this.link_list.push(
+    if (value) {
+      this.link_list.push(
       {
         key: this.link_key,
         value: value
@@ -33,6 +33,8 @@ export class LinklistComponent implements OnInit {
 
     this.link_key = '';
     this.link_value = '';
+    }
+    
   }
 
   delete(key: any) {
