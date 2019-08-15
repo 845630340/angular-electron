@@ -8,7 +8,7 @@
   <h4 style="text-align: center">your link list</h4>
   <ul>
     <li *ngFor="let item of link_list; let key = index">
-      <a [href]="item.value" target="_blank">{{item.key}}</a>
+      <a [href]="item.value" target="_blank">{{item.key}} | {{item.value}}</a>
       <button (click)='delete(key)'>delete</button>
     </li>
   </ul>
