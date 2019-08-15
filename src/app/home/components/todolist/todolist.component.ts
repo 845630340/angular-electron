@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {StorageService} from '../../../core/services/electron/storage.service';
+import { MyLndbService } from '../../data/my-lndb.service';
 
 @Component({
   selector: 'app-todolist',
@@ -11,13 +12,18 @@ export class TodolistComponent implements OnInit {
   public keyword: string;
   public todo_list: any=[];
 
-  constructor(public storage: StorageService) { }
+  constructor(public storage: StorageService, public mylndbService: MyLndbService) { }
 
   ngOnInit() {
-    let getdata: any = this.storage.get('todolist');
+    // let getdata: any = this.storage.get('todolist');
+    // if (getdata) {
+    //   this.todo_list = getdata;
+    // }
+    let getdata: any = this.mylndbService.get('todo_key');
     if (getdata) {
       this.todo_list = getdata;
     }
+    
   }
 
   add(e: any) {
@@ -30,7 +36,8 @@ export class TodolistComponent implements OnInit {
           }
         );
 
-        this.storage.set('todolist', this.todo_list);
+        // this.storage.set('todolist', this.todo_list);
+        this.mylndbService.set('todo_key', this.todo_list);
       }else {
         alert(this.keyword+' 已存在。')
       }
@@ -40,7 +47,8 @@ export class TodolistComponent implements OnInit {
 
   delete(key: any) {
     this.todo_list.splice(key, 1);
-    this.storage.set('todolist', this.todo_list);
+    // this.storage.set('todolist', this.todo_list);
+    this.mylndbService.set('todo_key', this.todo_list);
   }
 
   isArray(keyword: any) {
@@ -53,7 +61,8 @@ export class TodolistComponent implements OnInit {
   }
 
   checkboxChange() {
-    this.storage.set('todolist', this.todo_list);
+    // this.storage.set('todolist', this.todo_list);
+    this.mylndbService.set('todo_key', this.todo_list);
   }
 
 }
