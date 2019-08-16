@@ -36,8 +36,8 @@ export class TodolistComponent implements OnInit {
           }
         );
 
-        // this.storage.set('todolist', this.todo_list);
-        this.mylndbService.set('todo_key', this.todo_list);
+        // this.storage.set('todolist', this.todo_list);  // use localstorage
+        this.mylndbService.set('todo_key', this.todo_list);  // use Lndb which format is json 
       }else {
         alert(this.keyword+' 已存在。')
       }
