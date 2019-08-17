@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import {StorageService} from '../../../core/services/electron/storage.service';
 import { MyLndbService } from '../../data/my-lndb.service';
+import { MyLowdbService } from '../../data/my-lowdb.service';
+import { ThrowStmt } from '@angular/compiler';
 
 @Component({
   selector: 'app-todolist',
@@ -12,32 +14,24 @@ export class TodolistComponent implements OnInit {
   public keyword: string;
   public todo_list: any=[];
 
-  constructor(public storage: StorageService, public mylndbService: MyLndbService) { }
+  constructor(
+    public storage: StorageService, 
+    public mylndbService: MyLndbService,
+    public mylowdbService: MyLowdbService) { }
+    
 
   ngOnInit() {
-    // let getdata: any = this.storage.get('todolist');
-    // if (getdata) {
-    //   this.todo_list = getdata;
-    // }
-    let getdata: any = this.mylndbService.get('todo_key');
-    if (getdata) {
-      this.todo_list = getdata;
-    }
-    
+    this.todo_list = this.mylowdbService.get().value();
   }
 
   add(e: any) {
     if (e.keyCode == 13) {
       if (this.isArray(this.keyword) == false) {
-        this.todo_list.push(
-          {
-            title: this.keyword,
-            status: 0
-          }
-        );
-
-        // this.storage.set('todolist', this.todo_list);  // use localstorage
-        this.mylndbService.set('todo_key', this.todo_list);  // use Lndb which format is json 
+        let data = {
+          title: this.keyword,
+          status: 0
+        };
+        this.mylowdbService.set(data);
       }else {
         alert(this.keyword+' 已存在。')
       }
@@ -45,10 +39,8 @@ export class TodolistComponent implements OnInit {
     }
   }
 
-  delete(key: any) {
-    this.todo_list.splice(key, 1);
-    // this.storage.set('todolist', this.todo_list);
-    this.mylndbService.set('todo_key', this.todo_list);
+  delete(item: any) {
+    this.mylowdbService.remove(item);
   }
 
   isArray(keyword: any) {
@@ -61,8 +53,9 @@ export class TodolistComponent implements OnInit {
   }
 
   checkboxChange() {
-    // this.storage.set('todolist', this.todo_list);
+    
     this.mylndbService.set('todo_key', this.todo_list);
   }
+  
 
 }

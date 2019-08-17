@@ -1,6 +1,6 @@
 <div class="todo-header">
   <h2>ToDo List</h2>
-  <input type="text" placeholder="do something..." [(ngModel)]="keyword" (keyup)="add($event)"/>
+  <input type="text" placeholder="do something..." [(ngModel)]="keyword" (keyup)="test_add($event)"/>
 </div>
 
 <div class="todo-body">
@@ -10,7 +10,7 @@
       <li *ngFor="let item of todo_list; let key=index" [hidden]="item.status == 1">
         <input type="checkbox" [(ngModel)]="item.status" (change)="checkboxChange()"/>
         {{item.title}}
-        <button (click)="delete(key)">delete</button>
+        <button (click)="delete(item)">delete</button>
       </li>
     </ul>
   </div>
@@ -21,9 +21,10 @@
         <li *ngFor="let item of todo_list; let key=index" [hidden]="item.status == 0">
           <input type="checkbox" [(ngModel)]="item.status" (change)="checkboxChange()"/>
           {{item.title}}
-          <button (click)="delete(key)">delete</button>
+          <button (click)="delete(item)">delete</button>
         </li>
     </ul>
   </div>
 
 </div>
+
