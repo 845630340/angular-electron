@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import {StorageService} from '../../../core/services/electron/storage.service';
-import { MyLndbService } from '../../data/my-lndb.service';
 import { MyLowdbService } from '../../data/my-lowdb.service';
 import { ThrowStmt } from '@angular/compiler';
 
@@ -16,12 +15,11 @@ export class TodolistComponent implements OnInit {
 
   constructor(
     public storage: StorageService, 
-    public mylndbService: MyLndbService,
     public mylowdbService: MyLowdbService) { }
     
 
   ngOnInit() {
-    this.todo_list = this.mylowdbService.get().value();
+    this.todo_list = this.mylowdbService.get('todo').value();
   }
 
   add(e: any) {
@@ -31,7 +29,7 @@ export class TodolistComponent implements OnInit {
           title: this.keyword,
           status: 0
         };
-        this.mylowdbService.set(data);
+        this.mylowdbService.set(data, 'todo');
       }else {
         alert(this.keyword+' 已存在。')
       }
@@ -40,7 +38,7 @@ export class TodolistComponent implements OnInit {
   }
 
   delete(item: any) {
-    this.mylowdbService.remove(item);
+    this.mylowdbService.remove_todo(item);
   }
 
   isArray(keyword: any) {
@@ -52,9 +50,8 @@ export class TodolistComponent implements OnInit {
     return false;
   }
 
-  checkboxChange() {
-    
-    this.mylndbService.set('todo_key', this.todo_list);
+  checkboxChange(a: any) {
+    this.mylowdbService.change(a);
   }
   
 

@@ -9,22 +9,34 @@ export class MyLowdbService {
   public FileSync = require('lowdb/adapters/FileSync');
   public adapter = new this.FileSync('db.json');
   public db = this.low(this.adapter);
-  public tmp = this.db.defaults({ test: [] }).write();
+  public tmp_todo = this.db.defaults({ todo: [] }).write();
+  public tmp_link = this.db.defaults({ link: [] }).write();
  
   constructor() { }
 
-  set(data: any) {
-    this.db.get('test').push(data).write();
-    alert('数据已写入，请查看。')
+  // 输入数据（二者可用）
+  set(data: any, key_name: string) {
+    this.db.get(key_name).push(data).write();
   }
 
-  get() {
-    return this.db.get('test');
+  // 取数据（二者可用）
+  get(key_name: string) {
+    return this.db.get(key_name);
   }
 
-  remove(item: any) {
-    this.db.get('test').remove({title:item.title, status: item.status}).write();
+  // 删除todo中数据
+  remove_todo(item: any) {
+    this.db.get('todo').remove(item).write();
   }
 
+  // 改变todo中数据
+  change(item: any) {
+    this.db.get('test').find({title: item[0], status: !item[1]}).assign({title: item[0], status: item[1]}).write();
+  }
+
+  // 删除link中数据
+  remove_link(item: any) {
+    this.db.get('link').remove(item).write();
+  }
   
 }

@@ -10,7 +10,7 @@ input[type=text] {
     transition: 0.4s;
 }
 
-input:focus {
+input[type=text]:focus {
     width: 50%;
 }
 
