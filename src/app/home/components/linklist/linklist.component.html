@@ -7,8 +7,13 @@
 <div class='link-body'>
   <h4 style="text-align: center">your link list</h4>
   <ul>
-    <li *ngFor="let item of link_list">
-      <a [href]="item.value" target="_blank">{{item.key}} &nbsp;|&nbsp; {{item.value}}</a>
+    <li *ngFor="let item of link_list; let key=index">
+        <div *ngIf="(key+1) % 6 == 0" style='
+        width: 94.8%;
+        border-bottom: 1px dotted purple;
+        margin: 20px 0;
+      '></div>
+      <a [href]="item.value" target="_blank">{{item.key}} <span style='padding: 0 10px;'>|</span><span style='font-size: 12px;'>{{item.value}}</span> </a>
       <button (click)='delete(item)'>delete</button>
     </li>
   </ul>
