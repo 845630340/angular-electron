@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {StorageService} from '../../../core/services/electron/storage.service';
 import { MyLowdbService } from '../../data/my-lowdb.service';
-import { ThrowStmt } from '@angular/compiler';
+//import { ThrowStmt } from '@angular/compiler';
 
 @Component({
   selector: 'app-todolist',

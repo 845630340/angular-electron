@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import {StorageService} from '../../../core/services/electron/storage.service';
-import { MyLndbService } from '../../data/my-lndb.service';
 import { MyLowdbService } from '../../data/my-lowdb.service';
 
 @Component({

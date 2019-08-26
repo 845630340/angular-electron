@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {MyLndbService} from './data/my-lndb.service';
+import {HomeLowdbService} from './data/home-lowdb.service';
 
 @Component({
   selector: 'app-home',
@@ -8,9 +8,17 @@ import {MyLndbService} from './data/my-lndb.service';
 })
 export class HomeComponent implements OnInit {
 
-  constructor(public mylndbService: MyLndbService) { }
+  public data: any;
+
+  constructor(private homelowdbService: HomeLowdbService) { }
 
   ngOnInit() {
+    this.data = this.homelowdbService.get();
+  }
+
+  set(value: string, day: string, time: string) {
+    this.homelowdbService.set(value, day, time);
+    this.data = this.homelowdbService.get()
   }
 
 }

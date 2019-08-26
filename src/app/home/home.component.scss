@@ -27,11 +27,20 @@ table, th, td {
 }
 
 table {
-  width: 80%;
-  height: 300px;
+  width: 90%;
+  height: 400px;
   margin: auto;
 }
 
-th td {
-  height: 50px;
+input {
+  border: none;
+  outline: none;
+  display: block;
+  width: 260px;
+  margin-left: 10px;
+}
+
+input:focus {
+  border-bottom: 1px solid purple;
+  transition: 0.4s;
 }

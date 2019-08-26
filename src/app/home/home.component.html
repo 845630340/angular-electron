@@ -9,36 +9,58 @@
     <thead>
     <tr>
       <th></th>
-      <th>中午</th>
-      <th>傍晚</th>
+      <th>上午</th>
+      <th>下午</th>
+      <th>晚上</th>
     </tr>
     </thead>
     <tbody>
     <tr>
       <th>Monday</th>
-      <td>二头肌</td>
-      <td>硬拉，胸</td>
+      <td><input #box1 [value]="data.monday.morning" (keyup.enter)="set(box1.value, 'monday', 'morning')" (blur)="set(box1.value, 'monday', 'morning')"/></td>
+      <td><input #box2 [value]="data.monday.afternoon" (keyup.enter)="set(box2.value, 'monday', 'afternoon')" (blur)="set(box2.value, 'monday', 'afternoon')"/></td>
+      <td><input #box3 [value]="data.monday.night" (keyup.enter)="set(box3.value, 'monday', 'night')" (blur)="set(box3.value, 'monday', 'night')"/></td>
     </tr>
     <tr>
       <th>Tuesday</th>
-      <td>三头</td>
-      <td>腰，腹</td>
+      <td><input #box4 [value]="data.tuesday.morning" (keyup.enter)="set(box4.value, 'tuesday', 'morning')" (blur)="set(box4.value, 'tuesday', 'morning')"/></td>
+      <td><input #box5 [value]="data.tuesday.afternoon" (keyup.enter)="set(box5.value, 'tuesday', 'afternoon')" (blur)="set(box5.value, 'tuesday', 'afternoon')"/></td>
+      <td><input #box6 [value]="data.tuesday.night" (keyup.enter)="set(box6.value, 'tuesday', 'night')" (blur)="set(box6.value, 'tuesday', 'night')"/></td>
     </tr>
     <tr>
       <th>Wednesday</th>
-      <td>背上</td>
-      <td>深蹲，背中</td>
+      <td><input #box7 [value]="data.wednesday.morning" (keyup.enter)="set(box7.value, 'wednesday', 'morning')" (blur)="set(box7.value, 'wednesday', 'morning')"/></td>
+      <td><input #box8 [value]="data.wednesday.afternoon" (keyup.enter)="set(box8.value, 'wednesday', 'afternoon')" (blur)="set(box8.value, 'wednesday', 'afternoon')"/></td>
+      <td><input #box9 [value]="data.wednesday.night" (keyup.enter)="set(box9.value, 'wednesday', 'night')" (blur)="set(box9.value, 'wednesday', 'night')"/></td>
     </tr>
     <tr>
       <th>Thursday</th>
-      <td>肩，上推</td>
-      <td>腰，腹</td>
+      <td><input #box10 [value]="data.thursday.morning" (keyup.enter)="set(box10.value, 'thursday', 'morning')" (blur)="set(box10.value, 'thursday', 'morning')"/></td>
+      <td><input #box11 [value]="data.thursday.afternoon" (keyup.enter)="set(box11.value, 'thursday', 'afternoon')" (blur)="set(box11.value, 'thursday', 'afternoon')"/></td>
+      <td><input #box12 [value]="data.thursday.night" (keyup.enter)="set(box12.value, 'thursday', 'night')" (blur)="set(box12.value, 'thursday', 'night')"/></td>
     </tr>
     <tr>
       <th>Friday</th>
-      <td>背上</td>
-      <td>五公里，胸</td>
+      <td><input #box13 [value]="data.friday.morning" (keyup.enter)="set(box13.value, 'friday', 'morning')" (blur)="set(box13.value, 'friday', 'morning')"/></td>
+      <td><input #box14 [value]="data.friday.afternoon" (keyup.enter)="set(box14.value, 'friday', 'afternoon')" (blur)="set(box14.value, 'friday', 'afternoon')"/></td>
+      <td><input #box15 [value]="data.friday.night" (keyup.enter)="set(box15.value, 'friday', 'night')" (blur)="set(box15.value, 'friday', 'night')"/></td>
+    </tr>
+    <tr style='border-top: 3px solid purple;'>
+      <th>Saturday</th>
+      <td><input #box16 [value]="data.saturday.morning" (keyup.enter)="set(box16.value, 'saturday', 'morning')" (blur)="set(box16.value, 'saturday', 'morning')"/></td>
+      <td><input #box17 [value]="data.saturday.afternoon" (keyup.enter)="set(box17.value, 'saturday', 'afternoon')" (blur)="set(box17.value, 'saturday', 'afternoon')"/></td>
+      <td><input #box18 [value]="data.saturday.night" (keyup.enter)="set(box18.value, 'saturday', 'night')" (blur)="set(box18.value, 'saturday', 'night')"/></td>
+    </tr>
+    <tr>
+      <th>Sunday</th>
+      <td><input #box19 [value]="data.sunday.morning" (keyup.enter)="set(box19.value, 'sunday', 'morning')" (blur)="set(box19.value, 'sunday', 'morning')"/></td>
+      <td><input #box20 [value]="data.sunday.afternoon" (keyup.enter)="set(box20.value, 'sunday', 'afternoon')" (blur)="set(box20.value, 'sunday', 'afternoon')"/></td>
+      <td><input #box21 [value]="data.sunday.night" (keyup.enter)="set(box21.value, 'sunday', 'night')" (blur)="set(box21.value, 'sunday', 'night')"/></td>
     </tr>
     </tbody>
   </table>
 </div>
+<!-- <hr/>
+<br/>
+<input #box [value]="data" (keyup.enter)="set(box.value)"/>
+<p>{{data}}</p> -->
