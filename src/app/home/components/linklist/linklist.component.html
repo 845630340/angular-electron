@@ -6,6 +6,7 @@
 
 <div class='link-body'>
   <h4 style="text-align: center">your link list</h4>
+  <p *ngIf="link_list.length == 0" style="font-size: 12px;color: #b6b3b3;">还没有内容呢...</p>
   <ul>
     <li *ngFor="let item of link_list; let key=index">
         <div *ngIf="(key+1) % 6 == 0" style='
