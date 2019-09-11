@@ -85,7 +85,9 @@
     "node": ">=10.9.0"
   },
   "dependencies": {
+    "@angular/animations": "^8.2.5",
     "lndb": "0.0.3",
-    "lowdb": "^1.0.0"
+    "lowdb": "^1.0.0",
+    "ng-zorro-antd": "^8.3.0"
   }
 }

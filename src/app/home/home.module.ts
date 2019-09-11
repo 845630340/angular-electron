@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
+import { NgZorroAntdModule} from 'ng-zorro-antd';
 
 import { HomeRoutingModule } from './home-routing.module';
 import { StorageService } from '../core/services/electron/storage.service';
@@ -12,7 +13,7 @@ import { LinklistComponent } from './components/linklist/linklist.component';
 
 @NgModule({
   declarations: [HomeComponent, TodolistComponent, LinklistComponent],
-  imports: [CommonModule, SharedModule, HomeRoutingModule, FormsModule],
+  imports: [CommonModule, SharedModule, HomeRoutingModule, FormsModule, NgZorroAntdModule],
   providers: [StorageService]
 })
 export class HomeModule {}
