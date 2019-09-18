@@ -1,0 +1,50 @@
+<!-- 太丑 -->
+<!-- <div class='week-record'>
+  <div class='monday'>
+    <p>周 一</p>
+    <textarea  placeholder="今天要干点什么呀~"></textarea>
+    <textarea class='summary' placeholder="今日总结"></textarea>
+  </div>
+  <div class='not-monday'>
+    <p>周 二</p>
+    <textarea  placeholder="今天要干点什么呀~"></textarea>
+    <textarea class='summary' placeholder="今日总结"></textarea>
+  </div>
+</div> -->
+<p class='guide' (click)="guide()">使用指南</p>
+<div class='myheart'>
+  <thead>
+    <tr>
+      <th (click)='changeSize("monday")'>周 一</th>
+      <th (click)='changeSize("tuesday")'>周 二</th>
+      <th (click)='changeSize("wednesday")'>周 三</th>
+      <th (click)='changeSize("thursday")'>周 四</th>
+      <th (click)='changeSize("friday")'>周 五</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td >
+        <textarea placeholder="something..." #box1 id='monday' [(ngModel)]="data.monday" (blur)="save('monday', box1.value)"></textarea>
+      </td>
+      <td>
+        <textarea placeholder="something..." #box2 id='tuesday' [(ngModel)]="data.tuesday" (blur)="save('tuesday', box2.value)"></textarea>
+      </td>
+      <td>
+        <textarea placeholder="something..." #box3 id='wednesday' [(ngModel)]="data.wednesday" (blur)="save('wednesday', box3.value)"></textarea>
+      </td>
+      <td>
+        <textarea placeholder="something..." #box4 id='thursday' [(ngModel)]="data.thursday" (blur)="save('thursday', box4.value)"></textarea>
+      </td>
+      <td>
+        <textarea placeholder="something..." #box5 id='friday' [(ngModel)]="data.friday" (blur)="save('friday', box5.value)"></textarea>
+      </td>
+    </tr>
+  </tbody>
+</div>
+
+<div class='tips' *ngIf="showModal == true">
+  <p>1. 点击"周一"..."周五"，其所对应的编辑框会拉长</p>
+  <p>2. 每次编辑完后，点击该编辑框之外页面完成保存</p>
+  <p>3. 再次点击"使用指南"，可关闭这些指南提示信息</p>
+</div>

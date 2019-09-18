@@ -9,9 +9,9 @@
   "link": [],
   "home": {
     "monday": {
-      "morning": "beauty",
-      "afternoon": "liqingyan",
-      "night": "goog night"
+      "morning": "的",
+      "afternoon": "的",
+      "night": "的"
     },
     "tuesday": {
       "morning": "summer",
@@ -48,5 +48,12 @@
       "afternoon": "2",
       "night": "very much happy"
     }
+  },
+  "week": {
+    "monday": "小学时，你是秋天的诗和傍晚的夕阳西下。\n",
+    "tuesday": "1. 桌面应用\n\n2. git and gitlab\n\n3. 资产管理",
+    "wednesday": "",
+    "thursday": "",
+    "friday": ""
   }
 }

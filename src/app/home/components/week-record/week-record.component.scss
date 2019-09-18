@@ -1,0 +1,82 @@
+// .week-record {
+//     margin-left: 40px;
+//     margin-top: -30px;
+// }
+
+// p {
+//     display: inline-block;
+// }
+
+// textarea {
+//     width: 260px;
+//     height: 140px;
+//     position: relative;
+//     top: 98px;
+//     left: 53px;
+// }
+// textarea.summary {
+//     margin-left: 60px;
+// }
+
+// .not-monday {
+//     margin-top: 30px;
+// }
+
+// 新的尝试
+.myheart {
+    margin-top: 50px;
+    margin-left: 41px;
+    margin-bottom: 20px;
+}
+th {
+    width: 235px;
+    border-bottom: 1px solid #E6E6E6;
+    padding-bottom: 13px;
+    cursor: pointer;
+}
+
+th:hover {
+    border-bottom: 2px solid #00BFFF;
+}
+
+textarea {
+    width: 210px;
+    height: 220px;
+    margin-top: 25px;
+    margin-left: 10px;
+    border-radius: 5px;
+    outline: none;
+    resize: none;
+}
+
+textarea:hover {
+    border: 2px solid #088A4B;
+}
+
+td{
+    vertical-align: top;
+}
+
+// 使用指南
+.guide {
+    font-size: 12px;
+    float: right;
+    position: relative;
+    top: -17px;
+    right: 35px;
+    color: #01A9DB;
+    letter-spacing: 2px;
+    cursor: pointer;
+}
+
+//使用说明
+.tips{
+    width: 390px;
+    height: 200px;
+    margin: auto;
+    text-align: center;
+    font-size: 13px;
+    color: #01A9DB;
+    margin-top: 37px;
+    letter-spacing: 2px;
+}
