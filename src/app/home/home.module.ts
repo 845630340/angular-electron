@@ -13,8 +13,10 @@ import { LinklistComponent } from './components/linklist/linklist.component';
 import { WeekRecordComponent } from './components/week-record/week-record.component';
 
 @NgModule({
+
   declarations: [HomeComponent, TodolistComponent, LinklistComponent, WeekRecordComponent],
   imports: [CommonModule, SharedModule, HomeRoutingModule, FormsModule],
+
   providers: [StorageService]
 })
 export class HomeModule {}
