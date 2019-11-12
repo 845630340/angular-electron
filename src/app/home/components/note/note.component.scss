@@ -1,0 +1,58 @@
+.note-root {
+    margin-left: 20px;
+    margin-top: 50px;
+}
+
+.note-root .left {
+    width: 20%;
+    height: 88%;
+    position: fixed;
+    left: 20px;
+    bottom: 10px;
+    z-index: 10;
+    // background: #eee;
+    border-right: 1px solid #D8D8D8;
+}
+.note-root .left:hover {
+    background: #EFF5FB;
+}
+
+.note-root .right {
+    margin-left: 300px;
+    // border: 1px solid #eee;
+    // height: 800px;
+    margin-bottom: 20px;
+}
+
+.note-root .left button {
+    display: block;
+    outline: none;
+    margin: 50px auto;
+    width: 108px;
+    height: 36px;
+    border: none;
+    background: #81BEF7;
+    color: white;
+    border-radius: 5px;
+}
+
+// -----------------------------1. edit---------------------------
+.post-left {
+    display: inline-block;
+}
+.post-right {
+    display: inline-block;
+}
+
+.post-left textarea {
+    width: 700px;
+    height: 530px;
+    display: inline-block;
+    border-radius: 5px;
+    outline: none;
+    resize: none;
+    line-height: 23px;
+    font-size: 15px;
+    letter-spacing: 1px;
+    box-shadow: 5px 5px 5px #888888;
+}

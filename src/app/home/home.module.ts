@@ -11,9 +11,10 @@ import { SharedModule } from '../shared/shared.module';
 import { TodolistComponent } from './components/todolist/todolist.component';
 import { LinklistComponent } from './components/linklist/linklist.component';
 import { WeekRecordComponent } from './components/week-record/week-record.component';
+import { NoteComponent } from './components/note/note.component';
 
 @NgModule({
-  declarations: [HomeComponent, TodolistComponent, LinklistComponent, WeekRecordComponent],
+  declarations: [HomeComponent, TodolistComponent, LinklistComponent, WeekRecordComponent, NoteComponent],
   imports: [CommonModule, SharedModule, HomeRoutingModule, FormsModule],
   providers: [StorageService]
 })

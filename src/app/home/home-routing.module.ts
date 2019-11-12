@@ -5,6 +5,7 @@ import { HomeComponent } from './home.component';
 import { TodolistComponent } from './components/todolist/todolist.component';
 import { LinklistComponent } from './components/linklist/linklist.component';
 import {WeekRecordComponent } from './components/week-record/week-record.component';
+import {NoteComponent} from './components/note/note.component';
 
 const routes: Routes = [
   {
@@ -13,7 +14,8 @@ const routes: Routes = [
   },
   {path: 'home/todolist', component: TodolistComponent},
   {path: 'home/linklist', component: LinklistComponent},
-  {path: 'home/week-record', component: WeekRecordComponent}
+  {path: 'home/week-record', component: WeekRecordComponent},
+  {path: 'home/note', component: NoteComponent}
 ];
 
 @NgModule({

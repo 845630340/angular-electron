@@ -1,0 +1,25 @@
+<div class="note-root">
+  <div class="left">
+    <div style="margin-top: 120px;">
+      <button class="button1" (click)="edit()">edit</button>
+      <button class="button2" (click)="show_list()">show</button>
+      <button class="button3">正序/倒序</button>
+      <button class="button4">count</button>
+    </div>
+  </div>
+
+  <div class="right" *ngIf="page == 1">
+    <div class="post" >
+      <div class="post-left">
+          <textarea placeholder="something..."></textarea>
+      </div>
+      <div class="post-right">
+        time and cancel
+      </div>
+    </div>
+  </div>
+
+  <div class="right" *ngIf="page == 2">
+    post展示页。
+  </div>
+</div>
