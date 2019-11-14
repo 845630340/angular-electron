@@ -10,11 +10,8 @@
     left: 20px;
     bottom: 10px;
     z-index: 10;
-    // background: #eee;
+    background: url(left-background.jpg);
     border-right: 1px solid #D8D8D8;
-}
-.note-root .left:hover {
-    background: #EFF5FB;
 }
 
 .note-root .right {
@@ -31,7 +28,7 @@
     width: 108px;
     height: 36px;
     border: none;
-    background: #81BEF7;
+    background: #c27ba0;
     color: white;
     border-radius: 5px;
 }
@@ -42,17 +39,45 @@
 }
 .post-right {
     display: inline-block;
+    float: right;
+    position: relative;
+    width: 166px;
+    right: 16px;
+    top: 70px;
 }
 
 .post-left textarea {
-    width: 700px;
-    height: 530px;
+    width: 640px;
+    height: 480px;
     display: inline-block;
     border-radius: 5px;
     outline: none;
     resize: none;
-    line-height: 23px;
+    line-height: 28px;
     font-size: 15px;
     letter-spacing: 1px;
-    box-shadow: 5px 5px 5px #888888;
+    box-shadow: 5px 5px 5px #bdbcbc;
+    background: url(map.jpg);
+    border: 1px solid #bbb0b5;
+    font-weight: 800;
+    padding: 20px 30px;
+}
+
+// edit: save按钮、reset按钮
+.post-right button{
+    outline: none;
+    width: 108px;
+    height: 36px;
+    border: none;
+    background: #c27ba0;
+    color: white;
+    border-radius: 5px;
+    margin-top: 50px;
+}
+
+// 文章被创建的时间
+.post-right-three {
+    margin-top: 50px;
+    font-size: 14px;
+    line-height: 26px;
 }

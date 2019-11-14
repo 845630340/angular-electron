@@ -11,15 +11,24 @@
   <div class="right" *ngIf="page == 1">
     <div class="post" >
       <div class="post-left">
-          <textarea placeholder="something..."></textarea>
+          <textarea placeholder="something..." #box1 [(ngModel)]="content" ></textarea>
       </div>
       <div class="post-right">
-        time and cancel
+        <div class="post-right-one">
+          <button (click)="save()">save</button>
+        </div>
+        <div class="post-right-two">
+          <button (click)="reset()">reset</button>
+        </div>
+        <div class="post-right-three" *ngIf="isShowTime === true">
+          Created at<br/>
+          {{time | date:"yyyy-MM-dd hh:mm:ss a"}}
+        </div>
       </div>
     </div>
   </div>
 
   <div class="right" *ngIf="page == 2">
-    post展示页。
+    {{page2_data}}
   </div>
 </div>
