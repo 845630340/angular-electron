@@ -4,10 +4,11 @@
       <button class="button1" (click)="edit()">edit</button>
       <button class="button2" (click)="show_list()">show</button>
       <button class="button3">正序/倒序</button>
-      <button class="button4">count</button>
+      <button class="button4">{{count}}</button>
     </div>
   </div>
 
+  <!-- edit -->
   <div class="right" *ngIf="page == 1">
     <div class="post" >
       <div class="post-left">
@@ -22,13 +23,24 @@
         </div>
         <div class="post-right-three" *ngIf="isShowTime === true">
           Created at<br/>
-          {{time | date:"yyyy-MM-dd hh:mm:ss a"}}
+          {{time | date:"yyyy-MM-dd hh:mm:ss a EEEE"}}
         </div>
       </div>
     </div>
   </div>
 
   <div class="right" *ngIf="page == 2">
-    {{page2_data}}
+    <div *ngFor="let item of data_list;">
+      <textarea class="show">{{item.post}}</textarea>
+      <div class="show_operation">
+        <p>{{item.time | date:"yyyy-MM-dd hh:mm:ss a EEEE"}}</p>
+        <button class='del_icon' (click)="delete(item)">
+          <i class="g_del"></i>
+        </button>
+        <button class='view_icon' (click)="show_detail(item)">
+          <i class="g_view"></i>
+        </button>
+      </div>
+    </div>
   </div>
 </div>

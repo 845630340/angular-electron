@@ -74,10 +74,103 @@
     border-radius: 5px;
     margin-top: 50px;
 }
+.post-right button:hover {
+    box-shadow: 5px 5px 5px #bdbcbc;
+    background: #b1658c;
+}
 
 // 文章被创建的时间
 .post-right-three {
     margin-top: 50px;
     font-size: 14px;
     line-height: 26px;
+}
+
+// -----------------------------2. show---------------------------
+.show {
+    width: 640px;
+    height: 48px;
+    display: inline-block;
+    border-radius: 5px;
+    outline: none;
+    resize: none;
+    // line-height: 28px;
+    font-size: 15px;
+    letter-spacing: 1px;
+    box-shadow: 5px 5px 5px #bdbcbc;
+    // background: url(map.jpg);
+    border: 1px solid #bbb0b5;
+    // font-weight: 800;
+    padding: 10px 30px;
+    margin-bottom: 20px;
+}
+
+.show_operation {
+    float: right;
+    position: relative;
+    right: 32px;
+    top: -4px;
+    font-size: 10px;
+}
+
+// 删除按钮样式，大发！
+.g_del{
+    display: inline-block;
+    width: 12px;
+    height: 2px;
+    background: white;
+    line-height: 0;
+    font-size: 0;
+    vertical-align: middle;
+    -webkit-transform: rotate(45deg);
+  }
+.g_del:after {
+    content: "/";
+    display: block;
+    width: 12px;
+    height: 2px;
+    background: white;
+    -webkit-transform: rotate(-90deg);
+}
+  
+.del_icon{
+    width: 25px;
+    height:25px;
+    border-radius: 50px;
+    outline: none;
+    border: none;
+}
+.del_icon:hover {
+    background: rgb(214, 98, 118);
+}
+
+//show模块中展示文章细节功能
+.g_view{
+    display: inline-block;
+    width: 12px;
+    height: 2px;
+    background: white;
+    line-height: 0;
+    font-size: 0;
+    vertical-align: middle;
+  }
+.g_view:after {
+    content: "/";
+    display: block;
+    width: 12px;
+    height: 2px;
+    background: white;
+    -webkit-transform: rotate(-90deg);
+}
+
+.view_icon{
+    width: 25px;
+    height:25px;
+    border-radius: 50px;
+    outline: none;
+    border: none;
+    margin-left: 20px;
+}
+.view_icon:hover {
+    background: rgb(96, 189, 252);
 }
