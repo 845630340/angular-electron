@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {  NoteLowdbService } from '../../data/note-lowdb.service';
+import { ThrowStmt } from '@angular/compiler';
 
 @Component({
   selector: 'app-note',
@@ -37,12 +38,20 @@ export class NoteComponent implements OnInit {
       }
       this.noteService.set(data);
       this.data_list = this.noteService.get();
-      this.count = this.noteService.get().__wrapped__.note.length;;
+      this.count = this.data_list.__wrapped__.note.length;
       alert('已保存。')
     } else {
       alert('还未输入任何内容。')
     }
-    
+  }
+
+  save_package() {
+    if (this.page == 1) {
+      this.save();
+    } else if (this.page == 11) {
+      this.delete(this.tmp_data);
+      this.save();
+    }
   }
 
   reset() {
@@ -59,14 +68,17 @@ export class NoteComponent implements OnInit {
   delete(item: any) {
     this.noteService.remove_note(item);
     this.data_list = this.noteService.get();
-    this.count = this.noteService.get().__wrapped__.note.length;
+    this.count = this.data_list.__wrapped__.note.length;
   }
 
+  public tmp_data = {};
   show_detail(item: any) {
-    this.page = 1;
+    this.page = 11;
     this.content = item.post;
     this.time = item.time;
     this.isShowTime = true;
+    
+    this.tmp_data = item;
   }
   
 

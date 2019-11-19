@@ -9,14 +9,14 @@
   </div>
 
   <!-- edit -->
-  <div class="right" *ngIf="page == 1">
+  <div class="right" *ngIf="page == 1 || page == 11">
     <div class="post" >
       <div class="post-left">
           <textarea placeholder="something..." #box1 [(ngModel)]="content" ></textarea>
       </div>
       <div class="post-right">
         <div class="post-right-one">
-          <button (click)="save()">save</button>
+          <button (click)="save_package()">save</button>
         </div>
         <div class="post-right-two">
           <button (click)="reset()">reset</button>
